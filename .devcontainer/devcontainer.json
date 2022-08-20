@@ -4,7 +4,56 @@
 	"image": "froland/latex:latest",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"latex-workshop.intellisense.package.enabled": true,
+		"latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+		"latex-workshop.latex.autoBuild.run": "never",
+		"latex-workshop.latex.outDir": "%DIR%/out",
+		"latex-workshop.latex.recipe.default": "first",
+		"latex-workshop.latex.tools": [
+			{
+				"name": "latexmk",
+				"command": "latexmk",
+				"args": [
+					"-synctex=1",
+					"-silent",
+					"-lualatex",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"-outdir=%OUTDIR%",
+					"--shell-escape",
+					"%DOC%"
+				],
+				"env": {}
+			},
+			{
+				"name": "pdflatex",
+				"command": "pdflatex",
+				"args": [
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"%DOC%"
+				],
+				"env": {}
+			},
+			{
+				"name": "bibtex",
+				"command": "bibtex",
+				"args": [
+					"%DOCFILE%"
+				],
+				"env": {}
+			}
+		],
+		"latex-workshop.linting.chktex.enabled": true,
+		"latex-workshop.message.update.show": false,
+		"latex-workshop.synctex.afterBuild.enabled": true,
+		"latex-workshop.view.pdf.viewer": "tab",
+		"[latex]": {
+			"editor.defaultFormatter": "James-Yu.latex-workshop"
+		}
+	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
