@@ -1,4 +1,9 @@
-# introduction-eval
-Premier QCM sur les infos de la séance de bienvenue.
+# qcm-template
+Multiple-choice questions template.
 
-Cette évaluation formative a pour objectifs de familiariser les étudiants avec le format du questionnaire et le type de question utilisé.
+Works with http://auto-multiple-choice.net.
+
+You can compile this with the command:
+```bash
+$ latexmk
+```

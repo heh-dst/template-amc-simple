@@ -1,0 +1,15 @@
+cr/
+data/
+exports/
+out/
+scans/
+amc-*
+*.amc
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.xml
+*.zip
