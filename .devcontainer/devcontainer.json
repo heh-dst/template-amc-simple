@@ -1,7 +1,7 @@
 {
   "name": "LaTeX",
 	// Update the 'image' property with your Docker image name.
-	"image": "ghcr.io/froland/latex:latest",
+	"image": "froland/latex:latest",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {},
