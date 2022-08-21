@@ -13,3 +13,7 @@ To use it:
    ```sh
    auto-multiple-choice
    ```
+
+# Related work
+
+This template works along with the `froland/auto-multiple-choice` public Docker image.
