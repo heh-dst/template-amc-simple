@@ -16,4 +16,4 @@ To use it:
 
 # Related work
 
-This template works along with the `froland/auto-multiple-choice` public Docker image.
+This template works along with the [froland/auto-multiple-choice](https://github.com/froland/auto-multiple-choice) public Docker image.
