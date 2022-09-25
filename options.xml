@@ -38,7 +38,7 @@ Regards.</email_text>
   <filter>latex</filter>
   <filtered_source>DOC-filtered.tex</filtered_source>
   <format_export>ods</format_export>
-  <liste_key></liste_key>
+  <liste_key>ID</liste_key>
   <listeetudiants></listeetudiants>
   <maj_bareme>1</maj_bareme>
   <modele_regroupement></modele_regroupement>
