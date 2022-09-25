@@ -1,5 +1,6 @@
 \documentclass[11pt,french,a4paper]{article}
 
+\usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{multicol}
@@ -120,43 +121,37 @@
 
 %%% copies
 
-\def\insertRetard{ %
-{\AMCquestionNumberfalse%
-\def\AMCbeginQuestion##1##2{}\AMCnobloc%
-\begin{questionmult}{00retard}
-  \AMCnoCompleteMulti\AMCdontAnnotate%
-  \def\AMCbeginAnswer{}\def\AMCendAnswer{}%
-  Réservé:~\begin{choicescustom}[o]\wrongchoice{retard \(< 5\) minutes~}\scoring{b=0,m=-10}\wrongchoice{retard \(\geq 5\) minutes}\scoring{b=0,m=-20}\end{choicescustom}%
-\end{questionmult}}%
-}
-
 \onecopy{16}{
   \setlength{\parindent}{0pt}
   %%% beginning of the header
-  \begin{minipage}[t]{10cm}
-    {\raggedright \LARGE \nohyphens{\thetitle} \par} \vspace{1.5em} {\large \thedate} % chktex 1
-  \end{minipage}\hspace{\stretch{1}}%
-  \champnom{\fbox{\begin{minipage}[t]{6cm}%
-        {\footnotesize Nom et prénom \par}%
-        \vspace{8mm}\namefielddots{}%
-        \vspace*{1mm}%
+  \noindent{{\LARGE \nohyphens{\thetitle}} \hfill {\large \thedate}}
+
+  \vspace{2em}
+
+  \noindent{\setlength{\parindent}{0pt}\hspace*{\fill}\AMCcodeGridInt{etu}{5}\hspace*{\fill}
+  \begin{minipage}[b]{.6\linewidth}
+    $\longleftarrow{}$\hspace{0pt plus 1cm} Codez votre matricule d'étudiant ci-contre et écrivez vos nom et prénom à l'intérieur du cadre ci-dessous tels qu'ils apparaissent sur le document d'identité présenté lors de votre inscription.
+
+    \vspace{1.5em}
+
+    \namefield{\fbox{\begin{minipage}[b]{\linewidth}%
+      {\footnotesize Nom et prénom \par}%
+      \vspace{5mm}\namefielddots{}%
+      \vspace*{1mm}%
       \end{minipage}}}
+  \end{minipage}}
 
-  \textit{
-    \section*{Consignes}
-    \begin{itemize}
-      \item Répondez aux questions à réponse unique en cochant la case correspondant à la meilleure réponse.
-      \item Les questions avec le symbole \multiSymbole{} sont des questions à réponses multiples.
-            Cochez toutes les réponses correctes ou cochez la case \enquote{Aucune de ces réponses n'est correcte.}.
-      \item Cochez les cases au moyen d'une croix.
-      \item En cas d'erreur, noircissez la case sans laisser d'espace blanc.
-      \item Rien de ce qui est écrit ou dessiné en dehors des cases à cocher n'est pris en compte pour l'évaluation.
-      \item Afin de faciliter la lecture optique, utilisez un bic bleu ou noir.
-    \end{itemize}
-  }
-
-  \fcolorbox{black}{lightgray}{\insertRetard}
-  \vspace*{1cm}
+  \noindent\hrulefill{}
+  \begin{itemize}[nosep]
+    \item Répondez aux questions à l'aide d'une croix dans la case correspondant à votre réponse.
+    \item Les questions avec le symbole \multiSymbole{} peuvent avoir zéro, une ou plusieurs bonnes réponses.
+          Les autres ont une seule bonne réponse.
+    \item Vous pouvez \enquote{décocher} une case en la noircissant, sans laisser d'espace blanc.
+    \item Rien de ce qui est écrit ou dessiné en dehors des cases à cocher ne sera pris en compte.
+    \item Afin de faciliter la lecture optique, utilisez un bic bleu ou noir.
+  \end{itemize}
+  \noindent\hrulefill{}
+  \vspace*{1.5em}
 
   %%% end of the header
 
