@@ -15,6 +15,20 @@
   // 	],
   // 	"description": "Log output to console"
   // }
+  "Insert a correct choice.": {
+    "scope": "latex",
+    "prefix": "cc",
+    "body": [
+      "\\correctchoice{$1}$0"
+    ]
+  },
+  "Insert a distractor.": {
+    "scope": "latex",
+    "prefix": "wc",
+    "body": [
+      "\\wrongchoice{$1}$0"
+    ]
+  },
   "Insert multiple-choice single-answer (MCSA) question.": {
     "scope": "latex",
     "prefix": "mcsa",
@@ -129,8 +143,7 @@
     "scope": "latex",
     "prefix": "cgr",
     "body": [
-      "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}",
-      "$0"
+      "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}$0"
     ]
   }
 }
