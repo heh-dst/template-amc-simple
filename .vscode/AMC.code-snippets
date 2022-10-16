@@ -23,7 +23,7 @@
       "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{choices}",
-      "      \\correctchoice{${4:right answer}}",
+      "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
       "    \\end{choices}",
       "  \\end{question}",
@@ -40,7 +40,7 @@
       "    ${3:question}~?",
       "    \\begin{multicols}{${6:2}}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
-      "        \\correctchoice{${4:right answer}}",
+      "        \\correctchoice{${4:right answer}}$0",
       "        \\wrongchoice{${5:distractor}}",
       "      \\end{choices}",
       "    \\end{multicols}",
@@ -57,7 +57,7 @@
       "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{choiceshoriz}",
-      "      \\correctchoice{${4:right answer}}",
+      "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
       "    \\end{choiceshoriz}",
       "  \\end{question}",
@@ -73,7 +73,7 @@
       "  \\begin{questionmult}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{choices}",
-      "      \\correctchoice{${4:right answer}}",
+      "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
       "    \\end{choices}",
       "  \\end{questionmult}",
@@ -90,7 +90,7 @@
       "    ${3:question}~?",
       "    \\begin{multicols}{${6:2}}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
-      "        \\correctchoice{${4:right answer}}",
+      "        \\correctchoice{${4:right answer}}$0",
       "        \\wrongchoice{${5:distractor}}",
       "      \\end{choices}",
       "    \\end{multicols}",
@@ -107,12 +107,12 @@
       "  \\begin{questionmult}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{choiceshoriz}",
-      "      \\correctchoice{${4:right answer}}",
+      "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
       "    \\end{choiceshoriz}",
       "  \\end{questionmult}",
       "}",
-      ""
+      "",
     ]
   },
   "Insert centered graphics.": {
@@ -121,14 +121,16 @@
     "body": [
       "\\begin{center}",
       "  \\includegraphics[width=${1:4cm}]{${2:filename.png}}",
-      "\\end{center}"
+      "\\end{center}",
+      "$0"
     ]
   },
   "Copy a question group into a target group for randomization.": {
     "scope": "latex",
     "prefix": "cgr",
     "body": [
-      "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}"
+      "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}",
+      "$0"
     ]
   }
 }
