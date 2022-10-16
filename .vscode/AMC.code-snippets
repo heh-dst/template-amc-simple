@@ -114,5 +114,14 @@
       "}",
       ""
     ]
+  },
+  "Insert centered graphics.": {
+    "scope": "latex",
+    "prefix": "gra",
+    "body": [
+      "\\begin{center}",
+      "  \\includegraphics[width=${1:4cm}]{${2:filename.png}}",
+      "\\end{center}"
+    ]
   }
 }
