@@ -123,5 +123,12 @@
       "  \\includegraphics[width=${1:4cm}]{${2:filename.png}}",
       "\\end{center}"
     ]
+  },
+  "Copy a question group into a target group for randomization.": {
+    "scope": "latex",
+    "prefix": "cgr",
+    "body": [
+      "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}"
+    ]
   }
 }
