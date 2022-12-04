@@ -52,7 +52,7 @@
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
-      "    \\begin{multicols}{${6:2}}\\AMCBoxedAnswers{}",
+      "    \\begin{multicols}{2}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
       "        \\correctchoice{${4:right answer}}$0",
       "        \\wrongchoice{${5:distractor}}",
@@ -102,7 +102,7 @@
       "\\element{${1:q000}}{",
       "  \\begin{questionmult}{${2:identifier}}",
       "    ${3:question}~?",
-      "    \\begin{multicols}{${6:2}}\\AMCBoxedAnswers{}",
+      "    \\begin{multicols}{2}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
       "        \\correctchoice{${4:right answer}}$0",
       "        \\wrongchoice{${5:distractor}}",
@@ -144,6 +144,15 @@
     "prefix": "cgr",
     "body": [
       "\\copygroup[${2:how many questions?}]{${1:which question group}}{all}$0"
+    ]
+  },
+  "Insert implicit general solutions.": {
+    "scope": "latex",
+    "prefix": "igs",
+    "body": [
+      "\\lastchoices{}",
+      "\\wrongchoice{\\textit{Aucune des solutions proposée n'est correcte.}}",
+      "\\wrongchoice{\\textit{Toutes les solutions proposées sont correctes.}}"
     ]
   }
 }
