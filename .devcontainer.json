@@ -1,9 +1,31 @@
 {
   "name": "Auto-Multiple-Choice",
-  // Update the 'image' property with your Docker image name.
   "image": "froland/devcontainer-amc:v2.0.3",
-  // Set *default* container specific settings.json values on container create.
+  "extensions": [
+    "cs50.extension-uninstaller",
+    "editorConfig.editorConfig",
+    "GitHub.github-vscode-theme",
+    "James-Yu.latex-workshop",
+    "visualstudioexptteam.vscodeintellicode",
+    "vscode-icons-team.vscode-icons"
+  ],
   "settings": {
+    "editor.fontFamily": "'FiraCode NF', 'FiraCode Nerd Font', 'Fira Code', 'FiraCode', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "extensions.ignoreRecommendations": true,
+    "extension-uninstaller.uninstall": [
+      "github.copilot",
+      "github.copilot-nightly",
+      "ms-toolsai.jupyter",
+      "tabnine.tabnine-vscode"
+    ],
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/node_modules/*/**": true
+    },
+    "git.autofetch": true,
     "latex-workshop.intellisense.package.enabled": true,
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     "latex-workshop.latex.autoBuild.run": "never",
@@ -51,21 +73,14 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "[latex]": {
       "editor.defaultFormatter": "James-Yu.latex-workshop"
-    }
+    },
+    "window.autoDetectColorScheme": true,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.preferredLightColorTheme": "GitHub Light Default",
+    "workbench.tips.enabled": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false
   },
-  // Add the IDs of extensions you want installed when the container is created.
-  "extensions": [
-    "EditorConfig.EditorConfig",
-    "James-Yu.latex-workshop"
-  ],
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-  // Uncomment to run commands after the container is created - like installing curl
-  // "postCreateCommand": "apt-get update && apt-get install -y curl",
-  // Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
-  // "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
-  // Uncomment when using a ptrace-based debugger like C++, Go, and Rust
-  // "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
-  // Comment out to connect as root instead. To add a non-root user, see: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode"
 }
