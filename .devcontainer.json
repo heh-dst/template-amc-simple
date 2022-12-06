@@ -69,7 +69,7 @@
     ],
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.message.update.show": false,
-    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.synctex.afterBuild.enabled": false,
     "latex-workshop.view.pdf.viewer": "tab",
     "[latex]": {
       "editor.defaultFormatter": "James-Yu.latex-workshop"
