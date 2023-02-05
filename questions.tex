@@ -6,10 +6,11 @@
 \usepackage{multicol}
 \usepackage{titling}
 \usepackage{hyphenat}
+\usepackage{booktabs}
 
 \usepackage[francais,box,completemulti]{automultiplechoice}
 \usepackage{hyperref}
-\title{Projet d'intégration de développement}
+\title{Examen}
 \date{\today}
 \author{François ROLAND}
 \AMCrandomseed{1}
@@ -33,7 +34,8 @@
 
 %%% copies
 
-\onecopy{16}{
+\onecopy{1}{
+  \setcounter{figure}{0}
   \setlength{\parindent}{0pt}
   %%% beginning of the header
   \noindent{{\LARGE{\nohyphens{\thetitle}}}}
@@ -64,12 +66,13 @@
   \noindent\hrulefill{}
   \begin{itemize}[nosep]
     \item Répondez aux questions à l'aide d'une croix dans la case correspondant à votre réponse.
-    \item Vous pouvez \enquote{décocher} une case en la noircissant, sans laisser aucun espace blanc.
-    \item Rien de ce qui est écrit ou dessiné en dehors des cadres de réponse ne sera pris en compte.
-    \item Afin de faciliter la lecture optique, utilisez un bic bleu foncé ou noir.
-    \item Ne cochez pas les cases sur fond gris, elles sont réservées au correcteur.
-    \item Des pages de brouillon sont ajoutées à la fin de votre formulaire.
+    \item Une case complètement noircie est considérée comme une case non cochée.
+          Utilisez ceci pour décocher une case que vous auriez coché par erreur.
+    \item Ce qui est écrit ou dessiné en dehors des cadres de réponse n'est pas pris en compte pour l'évaluation.
+    \item Les cases sur fond gris sont réservées au correcteur, ne les cochez pas.
+    \item Des pages vides ont été ajoutées à votre formulaire en guise de brouillon.
           Remettez-les avec le reste de vos feuilles, car un formulaire incomplet sera considéré comme une tentative de fraude.
+    \item Afin de faciliter la lecture optique, utilisez un bic bleu foncé ou noir.
   \end{itemize}
   \noindent\hrulefill{}
   \vspace*{1.5em}
@@ -82,7 +85,7 @@
 
   \insertgroup{all}
 
-  \AMCcleardoublepage{}
+  \AMCaddpagesto{4}
 }
 
 
