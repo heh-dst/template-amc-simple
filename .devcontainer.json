@@ -1,6 +1,6 @@
 {
   "name": "Auto-Multiple-Choice",
-  "image": "froland/devcontainer-amc:v2.0.3",
+  "image": "froland/devcontainer-amc:v2.0.4",
   "extensions": [
     "cs50.extension-uninstaller",
     "editorConfig.editorConfig",
