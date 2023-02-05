@@ -136,7 +136,7 @@
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
       "    [1~point] ${3:question}~?",
-      "    \\AMCOpen{lineup=true,answer=$4}{\\wrongchoice[F]{F}\\scoring{0}\\correctchoice[V]{V}\\scoring{1}}",
+      "    \\AMCOpen{answer=$4}{\\wrongchoice[I]{I}\\scoring{0}\\correctchoice[C]{C}\\scoring{1}}",
       "  \\end{question}",
       "}",
       "$0",
