@@ -35,7 +35,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{choices}",
       "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
@@ -51,7 +51,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{multicols}{2}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
       "        \\correctchoice{${4:right answer}}$0",
@@ -69,7 +69,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{question}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{choiceshoriz}",
       "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
@@ -85,7 +85,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{questionmult}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{choices}",
       "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
@@ -101,7 +101,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{questionmult}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{multicols}{2}\\AMCBoxedAnswers{}",
       "      \\begin{choices}",
       "        \\correctchoice{${4:right answer}}$0",
@@ -119,7 +119,7 @@
     "body": [
       "\\element{${1:q000}}{",
       "  \\begin{questionmult}{${2:identifier}}",
-      "    ${3:question}~?",
+      "    [1~point] ${3:question}~?",
       "    \\begin{choiceshoriz}",
       "      \\correctchoice{${4:right answer}}$0",
       "      \\wrongchoice{${5:distractor}}",
@@ -127,6 +127,32 @@
       "  \\end{questionmult}",
       "}",
       "",
+    ]
+  },
+  "Insert short open question.": {
+    "scope": "latex",
+    "prefix": "so",
+    "body": [
+      "\\element{${1:q000}}{",
+      "  \\begin{question}{${2:identifier}}",
+      "    [1~point] ${3:question}~?",
+      "    \\AMCOpen{lineup=true,answer=$4}{\\wrongchoice[F]{F}\\scoring{0}\\correctchoice[V]{V}\\scoring{1}}",
+      "  \\end{question}",
+      "}",
+      "$0",
+    ]
+  },
+  "Insert long open question.": {
+    "scope": "latex",
+    "prefix": "lo",
+    "body": [
+      "\\element{${1:q000}}{",
+      "  \\begin{question}{${2:identifier}}",
+      "    [2~points] ${3:question}~?",
+      "    \\AMCOpen{lines=3,lineheight=.8cm,answer=$4}{\\wrongchoice[I]{I}\\scoring{0}\\wrongchoice[P]{P}\\scoring{1}\\correctchoice[C]{C}\\scoring{2}}",
+      "  \\end{question}",
+      "}",
+      "$0",
     ]
   },
   "Insert centered graphics.": {
