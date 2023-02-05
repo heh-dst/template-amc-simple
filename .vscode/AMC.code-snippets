@@ -177,8 +177,8 @@
     "prefix": "igs",
     "body": [
       "\\lastchoices{}",
-      "\\wrongchoice{\\textit{Aucune des solutions proposées n'est correcte.}}",
-      "\\wrongchoice{\\textit{Toutes les solutions proposées sont correctes.}}"
+      "\\wrongchoice{\\textit{Aucune des réponses n'est correcte.}}",
+      "\\wrongchoice{\\textit{Toutes les réponses sont correctes.}}"
     ]
   }
 }
