@@ -93,5 +93,6 @@
         }
       }
     }
-  }
+  },
+  "overrideCommand": false
 }
