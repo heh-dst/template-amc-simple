@@ -94,5 +94,12 @@
       }
     }
   },
-  "overrideCommand": false
+  "forwardPorts": [6900],
+  "overrideCommand": false,
+  "portsAttributes": {
+    "6900": {
+      "label": "VNC",
+      "onAutoForward": "openBrowserOnce"
+    }
+  }
 }

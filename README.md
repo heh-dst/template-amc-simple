@@ -1,15 +1,15 @@
 # qcm-template
 Multiple-choice questions template.
 
-Works with http://auto-multiple-choice.net.
+Documentation of auto-multiple-choice is available at http://auto-multiple-choice.net.
 
 To use it:
-1. Start an X11 server on your Docker host (like [VcXSrv](https://sourceforge.net/projects/vcxsrv/)) and allow incoming connections.
-2. In your Docker container, launch AMC
+1. Connect to the container with a browser: http://localhost:6900/vnc.html
+2. In your container terminal, launch AMC
    ```sh
    auto-multiple-choice
    ```
 
 # Related work
 
-This template works along with the [froland/auto-multiple-choice](https://github.com/froland/auto-multiple-choice) public Docker image.
+This template works along with the public Docker image [froland/devcontainer-amc](https://hub.docker.com/r/froland/devcontainer-amc) (sources available on [GitHub froland/devcontainers](https://github.com/froland/devcontainers)).
