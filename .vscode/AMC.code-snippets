@@ -39,7 +39,7 @@
       "    \\begin{choices}",
       "      \\correctchoice{${4:right answer}}",
       "      \\wrongchoice{${5:distractor}}$0",
-      "      \\lastchoices{}\\columnbreak{}",
+      "      \\lastchoices{}\\\\",
       "      \\begin{multicols}{6}[\\textit{Degré de certitude (en~\\%)}]",
       "        \\wrongchoice{\\(0-25\\)}\\scoring{set.SCORECORRECT=13,set.SCOREWRONG=4}",
       "        \\wrongchoice{\\(25-50\\)}\\scoring{set.SCORECORRECT=16,set.SCOREWRONG=3}",
