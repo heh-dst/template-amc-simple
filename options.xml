@@ -12,7 +12,7 @@ Regards.</email_text>
   <annote_rtl></annote_rtl>
   <assoc_code>ID</assoc_code>
   <auto_capture_mode>0</auto_capture_mode>
-  <code_examen>PROJWEB2-20220820</code_examen>
+  <code_examen>EXAM-DATE</code_examen>
   <cr>cr</cr>
   <data>data</data>
   <doc_catalog>DOC-catalog.pdf</doc_catalog>
@@ -47,8 +47,8 @@ Regards.</email_text>
   <nom_examen>Informations de bienvenue</nom_examen>
   <nombre_copies>0</nombre_copies>
   <note_arrondi>inf</note_arrondi>
-  <note_grain>0.5</note_grain>
-  <note_max>20</note_max>
+  <note_grain>1</note_grain>
+  <note_max>100</note_max>
   <note_max_plafond>1</note_max_plafond>
   <note_min></note_min>
   <note_null>0</note_null>
@@ -63,8 +63,8 @@ Regards.</email_text>
   <regroupement_compose>0</regroupement_compose>
   <regroupement_copies>ALL</regroupement_copies>
   <regroupement_type>STUDENTS</regroupement_type>
-  <seuil>0.15</seuil>
-  <seuil_up>0.98</seuil_up>
+  <seuil>0.10</seuil>
+  <seuil_up>0.9</seuil_up>
   <subjectemail>
     <email_subject>Exam question</email_subject>
     <email_text>Please find enclosed your question sheet.
