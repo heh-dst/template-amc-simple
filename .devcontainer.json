@@ -95,9 +95,7 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {
-      "noVncVersion": "1.4.0"
-    }
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
   "forwardPorts": [
     6080
