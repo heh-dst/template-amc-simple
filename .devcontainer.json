@@ -94,10 +94,17 @@
       }
     }
   },
-  "forwardPorts": [6900],
+  "features": {
+    "ghcr.io/devcontainers/features/desktop-lite:1": {
+      "noVncVersion": "1.4.0"
+    }
+  },
+  "forwardPorts": [
+    6080
+  ],
   "portsAttributes": {
-    "6900": {
-      "label": "VNC",
+    "6080": {
+      "label": "desktop",
       "onAutoForward": "openBrowserOnce"
     }
   }
