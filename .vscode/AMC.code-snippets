@@ -40,14 +40,10 @@
       "      \\correctchoice{${4:right answer}}",
       "      \\wrongchoice{${5:distractor}}$0",
       "      \\lastchoices{}\\\\",
-      "      \\begin{multicols}{6}[\\textit{Degré de certitude (en~\\%)}]",
-      "        \\wrongchoice{\\(0-25\\)}\\scoring{set.SCORECORRECT=13,set.SCOREWRONG=4}",
-      "        \\wrongchoice{\\(25-50\\)}\\scoring{set.SCORECORRECT=16,set.SCOREWRONG=3}",
-      "        \\wrongchoice{\\(50-70\\)}\\scoring{set.SCORECORRECT=17,set.SCOREWRONG=2}",
-      "        \\wrongchoice{\\(70-85\\)}\\scoring{set.SCORECORRECT=18,set.SCOREWRONG=0}",
-      "        \\wrongchoice{\\(85-95\\)}\\scoring{set.SCORECORRECT=19,set.SCOREWRONG=-6}",
-      "        \\wrongchoice{\\(95-100\\)}\\scoring{set.SCORECORRECT=20,set.SCOREWRONG=-20}",
-      "      \\end{multicols}",
+      "      \\wrongchoice{AUCUNE}",
+      "      \\wrongchoice{TOUTES}",
+      "      \\wrongchoice{MANQUE}",
+      "      \\wrongchoice{ABSURDITÉ}"
       "    \\end{choices}",
       "  \\end{questionmultx}",
       "}",
@@ -66,14 +62,10 @@
       "        \\correctchoice{${4:right answer}}",
       "        \\wrongchoice{${5:distractor}}$0",
       "        \\lastchoices{}\\columnbreak{}",
-      "        \\begin{multicols}{2}[\\textit{Degré de certitude (en~\\%)}]",
-      "          \\wrongchoice{\\(0-25\\)}\\scoring{set.SCORECORRECT=13,set.SCOREWRONG=4}",
-      "          \\wrongchoice{\\(25-50\\)}\\scoring{set.SCORECORRECT=16,set.SCOREWRONG=3}",
-      "          \\wrongchoice{\\(50-70\\)}\\scoring{set.SCORECORRECT=17,set.SCOREWRONG=2}",
-      "          \\wrongchoice{\\(70-85\\)}\\scoring{set.SCORECORRECT=18,set.SCOREWRONG=0}",
-      "          \\wrongchoice{\\(85-95\\)}\\scoring{set.SCORECORRECT=19,set.SCOREWRONG=-6}",
-      "          \\wrongchoice{\\(95-100\\)}\\scoring{set.SCORECORRECT=20,set.SCOREWRONG=-20}",
-      "        \\end{multicols}",
+      "        \\wrongchoice{AUCUNE}",
+      "        \\wrongchoice{TOUTES}",
+      "        \\wrongchoice{MANQUE}",
+      "        \\wrongchoice{ABSURDITÉ}"
       "      \\end{choices}",
       "    \\end{multicols}",
       "  \\end{questionmultx}",
@@ -128,9 +120,11 @@
     "scope": "latex",
     "prefix": "igs",
     "body": [
-      "\\lastchoices{}",
-      "\\wrongchoice{\\textit{Aucune des réponses n'est correcte.}}",
-      "\\wrongchoice{\\textit{Toutes les réponses sont correctes.}}"
+      "\\lastchoices{}\\columnbreak{}",
+      "\\wrongchoice{\\textsc{aucune}}",
+      "\\wrongchoice{\\textsc{toutes}}",
+      "\\wrongchoice{\\textsc{manque}}",
+      "\\wrongchoice{\\textsc{absurdité}}"
     ]
   }
 }
