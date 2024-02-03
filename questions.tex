@@ -1,34 +1,30 @@
-\documentclass[11pt,french,a4paper,twoside]{scrartcl}
+%%AMC:latex_engine=xelatex --shell-escape
 
-\usepackage{array}
-\usepackage{enumitem}
-\usepackage{graphicx}
-\usepackage{listings}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{titling}
-\usepackage{hyphenat}
-\usepackage{booktabs}
+\documentclass[11pt,french,a4paper,twoside]{article}
 
-\usepackage[francais,box]{automultiplechoice}
+\usepackage{array,enumitem,graphicx,listings,multicol,multirow,titling,hyphenat,booktabs}
+
+\usepackage[lang=FR,box,noshuffle,noshufflegroups,automarks,separateanswersheet]{automultiplechoice}
 \usepackage{hyperref}
-\title{Examen}
-\date{\today}
+\title{Questions bidons}
+\newcommand{\thesubtitle}{Examen blanc du \thedate{}}
+\date{08/02/2024}
 \author{François ROLAND}
-\AMCrandomseed{1}
-\AMCsetFoot{\thepage{}}
 \hypersetup{
   pdftitle={\thetitle},
   pdfauthor={\theauthor},
   pdflang={fr-BE},
   hidelinks}
+\usepackage{fontspec}
+\usepackage{libertine}
 \usepackage{polyglossia}
 \setdefaultlanguage{french}
 \usepackage{csquotes}
-\geometry{hmargin=2cm,headheight=2cm,headsep=.3cm,footskip=1cm,top=3cm,bottom=2cm}
-\begin{document}
 
-\scoringDefaultM{MAX=20,e=0,v=0,formula= (NBC==1?SCORECORRECT:SCOREWRONG),default.SCORECORRECT=20,default.SCOREWRONG=-20}
+\AMCrandomseed{1}
+\AMCsetFoot{\thepage{}}
+
+\begin{document}
 
 %%% preparation of the groups
 
@@ -36,73 +32,112 @@
 \setdefaultgroupmode{withoutreplacement}
 
 %%% questions (available snippets: mcsa[h|mc], mcma[h|mc], gra)
+\element{q1}{
+  \begin{question}{q1v1}
+    Quelle est la couleur du cheval blanc d'Henri IV~?
+    \begin{multicols}{2}
+      \begin{choices}
+        \correctchoice{blanc}
+        \wrongchoice{noir}
+        \wrongchoice{jaune}
+        \wrongchoice{rouge}
+        \lastchoices{}\columnbreak{}
+        \wrongchoice{\textsc{aucune}}
+        \wrongchoice{\textsc{toutes}}
+        \wrongchoice{\textsc{manque}}
+        \wrongchoice{\textsc{absurdité}}
+      \end{choices}
+    \end{multicols}
+  \end{question}
+}
 
 %%% copies
 
-\onecopy{1}{
+\begin{examcopy}[2]
   \setcounter{figure}{0}
-  \setlength{\parindent}{0pt}
   %%% beginning of the header
-  \noindent{%
-    \fbox{\begin{minipage}[b]{.33\linewidth}%
-        {\footnotesize Date \par}%
-        \vspace{\baselineskip}\dotfill%
-        \vspace*{1mm}%
-      \end{minipage}}%
-    \hspace{\fill}%
-    \namefield{\fbox{\begin{minipage}[b]{.63\linewidth}%
-          {\footnotesize Nom et prénom \par}%
-          \vspace{\baselineskip}\namefielddots{}%
-          \vspace*{1mm}%
-        \end{minipage}}}}
+  \noindent{\bf \thetitle{} \hfill{} \thesubtitle{}}
 
-  \vspace{\baselineskip}
+  \vspace{2ex}
 
-  \begin{center}
-    {\usekomafont{title}\huge{\nohyphens{\thetitle}}}
-  \end{center}
+  Durée~: 60~minutes.
 
-  \AMCsection*{Consignes}
+  Aucun document n'est autorisé.
+  La possession d'un objet électronique (smartphone, montre, écouteurs\ldots{}) pendant l'examen est interdite.
+
+  Commencez toujours par indiquer lisiblement vos nom et prénom, ainsi que la date sur la feuille de réponse.
+
+  Chaque question à choix multiple comporte \textbf{une} (et \textbf{une seule}) solution correcte.
+  Certaines de ces solutions, appelées solutions générales, font appel à votre vigilance.
   \begin{itemize}
-    \item Répondez aux questions en dessinant une croix avec un bic bleu foncé ou noir dans la case correspondant à votre choix.
-    \item Vous devez accompagner chaque réponse d'un des degrés de certitude suivants.
-          Vos points seront attribués en fonction de votre choix de degré de certitude selon le tableau ci-dessous.
-          \begin{center}
-            \begin{tabular}{llcccccc} \toprule
-                                           &            & \multicolumn{6}{c}{Degré de certitude (en \%)}                                                              \\ \cmidrule{3-8}
-                                           &            & \(0-25\)                                       & \(25-50\) & \(50-70\) & \(70-85\) & \(85-95\) & \(95-100\) \\ \midrule
-              \multirow{2}{4.5em}{Réponse} & Correcte   & \(+13\)                                        & \(+16\)   & \(+17\)   & \(+18\)   & \(+19\)   & \(+20\)    \\ \cmidrule{2-8}
-                                           & Incorrecte & \(+4\)                                         & \(+3\)    & \(+2\)    & \(0\)     & \(-6\)    & \(-20\)    \\ \bottomrule
-            \end{tabular}
-          \end{center}
-          Le barème des points a été calculé de manière à ce que~:
-          \begin{itemize}
-            \item Dire la vérité soit la stratégie qui rapporte le plus de points;
-            \item Ceux qui s'auto-évaluent bien gagnent plus de points que si l'on appliquait un barème
-                  correctif tenant compte des probabilités d'avoir la réponse correcte en la devinant.\footnote{En général,
-                    la majorité des étudiant.e.s s'autoestiment bien (c'est-a-dire avec réalisme) et sont avantagé.e.s
-                    par les degrés de certitude~: leur score est meilleur que s'il avait été calculé sur la seule base
-                    du nombre de réponses correctes.}
-          \end{itemize}
-    \item \textbf{Une case complètement noircie est considérée comme une case non cochée}.
-    \item Ce qui est écrit ou dessiné en dehors des cadres de réponse n'est pas pris en compte pour l'évaluation.
-    \item Les cases sur fond gris sont réservées au correcteur, ne les cochez pas.
-    \item Les pages vides à la fin de votre formulaire sont des pages de brouillon.
-          \textbf{Vous devez remettre le formulaire complet}, feuilles de brouillon comprises, à la fin de votre évaluation.
+    \item \textsc{aucune} = aucune des solutions proposées n'est correcte.
+    \item \textsc{toutes} = toutes les solutions proposées sont correctes.
+    \item \textsc{manque} = il est impossible de répondre parce que l'information (au moins une donnée) manque dans l'énoncé de la question (donc pas dans le cours ni dans la connaissance actuelle du problème).
+    \item \textsc{absurdité} = une absurdité dans l'énoncé rend toute la question sans objet (par exemple, une contrevérité dans l'énoncé).
   \end{itemize}
-  \clearpage
+  Attention~! La réponse \textsc{absurdité} a priorité sur les autres solutions générales et, évidemment, sur les réponses spécifiques à la question.
 
-  \AMCsection*{Questions}
+  Une réponse correcte rapporte 1~point.
+  Une réponse incorrecte, absente ou mal codée, rapporte 0~point.
+
+  Vous pouvez inscrire ce que vous voulez sur le questionnaire et les feuilles de brouillon, mais seule la feuille de réponse sera corrigée.
+  Vous devez rendre toutes les feuilles reçues, y compris celles de brouillon, à la fin de votre évaluation.
+
+  \noindent{\hrulefill{}}
+
+  \vspace{2ex}
+
   %%% end of the header
 
   \cleargroup{all}
 
   %%% copy question groups to the all group for randomization (available snippet: cgr)
+  \copygroup[1]{q1}{all}
+  \copygroup[1]{q2}{all}
 
   \insertgroup{all}
 
-  \AMCaddpagesto{4}
-}
+  \clearpage{}
+
+  \begin{center}
+    {\large{Feuille de brouillon}}
+  \end{center}
+
+  \AMCcleardoublepage{}
+
+  \AMCformBegin{}
+
+  \noindent{\begin{minipage}{.47\linewidth}
+      {\bf \thetitle{} \\ \thesubtitle{}}
+
+      {\large Feuille de réponse}
+    \end{minipage}%
+    \hfill{}%
+    \namefield{\fbox{\begin{minipage}{.47\linewidth}%
+          {\footnotesize Nom et prénom \par}%
+          \vspace{\baselineskip}\namefielddots{}%
+          \vspace*{1mm}%
+        \end{minipage}}}}
+
+  \vspace{2ex}
+
+  Utilisez \textbf{uniquement} un \textbf{bic bleu ou noir}, jamais d'autre couleur, ni de crayon, ni de feutre.
+
+  \textbf{Noircissez entièrement une seule case par question}.
+
+  En cas de modification de votre réponse, utilisez toujours un ruban correcteur.
+  Ne retracez jamais le contour d'une case ou sa lettre.
+  N'entourez jamais de case.
+
+  \noindent{\hrulefill{}}
+
+  \vspace{2ex}
+  %%% end of the answer sheet header
+
+  \AMCform{}
+  \AMCcleardoublepage{}
+
+\end{examcopy}
 
 
 \end{document}
