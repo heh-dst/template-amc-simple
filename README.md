@@ -1,15 +1,19 @@
 # qcm-template
-Multiple-choice questions template.
+Auto-Multiple-Choice project template.
 
+## Prerequisites:
+- Docker
+- VSCode
+- VSCode Dev Containers extension 
+
+## Isage
+To use it, open a terminal and type `auto-multiple-choice`.
+
+If the AMC window doesn't open, navigate to http://localhost:6900/vnc.html in your browser.
+The noVNC default password is `vscode`.
+
+## Documentation
 Documentation of auto-multiple-choice is available at http://auto-multiple-choice.net.
 
-To use it:
-1. Connect to the container with a browser: http://localhost:6900/vnc.html, password: `vscode`
-2. In your container terminal, launch AMC
-   ```sh
-   auto-multiple-choice
-   ```
-
-# Related work
-
+## Related work
 This template works along with the public Docker image [froland/devcontainer-amc](https://hub.docker.com/r/froland/devcontainer-amc) (sources available on [GitHub froland/devcontainers](https://github.com/froland/devcontainers)).
