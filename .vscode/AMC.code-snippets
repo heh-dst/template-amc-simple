@@ -34,7 +34,7 @@
     "prefix": "mcsa",
     "body": [
       "\\element{${1:q000}}{",
-      "  \\begin{questionmultx}{${2:identifier}}",
+      "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{choices}",
       "      \\correctchoice{${4:right answer}}",
@@ -43,9 +43,9 @@
       "      \\wrongchoice{AUCUNE}",
       "      \\wrongchoice{TOUTES}",
       "      \\wrongchoice{MANQUE}",
-      "      \\wrongchoice{ABSURDITÉ}"
+      "      \\wrongchoice{ABSURDITÉ}",
       "    \\end{choices}",
-      "  \\end{questionmultx}",
+      "  \\end{question}",
       "}",
       ""
     ]
@@ -55,7 +55,7 @@
     "prefix": "mcsamc",
     "body": [
       "\\element{${1:q000}}{",
-      "  \\begin{questionmultx}{${2:identifier}}",
+      "  \\begin{question}{${2:identifier}}",
       "    ${3:question}~?",
       "    \\begin{multicols}{2}",
       "      \\begin{choices}",
@@ -65,10 +65,10 @@
       "        \\wrongchoice{AUCUNE}",
       "        \\wrongchoice{TOUTES}",
       "        \\wrongchoice{MANQUE}",
-      "        \\wrongchoice{ABSURDITÉ}"
+      "        \\wrongchoice{ABSURDITÉ}",
       "      \\end{choices}",
       "    \\end{multicols}",
-      "  \\end{questionmultx}",
+      "  \\end{question}",
       "}",
       ""
     ]
