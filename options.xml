@@ -12,7 +12,7 @@ Regards.</email_text>
   <annote_rtl></annote_rtl>
   <assoc_code>ID</assoc_code>
   <auto_capture_mode>0</auto_capture_mode>
-  <code_examen>EXAM-DATE</code_examen>
+  <code_examen>DATE-CLASS</code_examen>
   <cr>cr</cr>
   <data>data</data>
   <doc_catalog>DOC-catalog.pdf</doc_catalog>
@@ -41,8 +41,8 @@ Regards.</email_text>
   <liste_key>ID</liste_key>
   <listeetudiants>%PROJET/ENORA.csv</listeetudiants>
   <maj_bareme>1</maj_bareme>
-  <modele_regroupement></modele_regroupement>
-  <moteur_latex_b>lualatex</moteur_latex_b>
+  <modele_regroupement>(ID)</modele_regroupement>
+  <moteur_latex_b>xelatex --shell-escape</moteur_latex_b>
   <name_field_type></name_field_type>
   <nom_examen>Informations de bienvenue</nom_examen>
   <nombre_copies>0</nombre_copies>
